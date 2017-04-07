@@ -1,5 +1,6 @@
 import requests
 import math
+import time
 
 def k2f(t):
     return (t*9/5.0)-459.67
@@ -19,13 +20,31 @@ day_data = tday.json()
 t = data['main']['temp']
 
 print(data['name'])
-# print(day_data['list']['weather'])
 
 decision = input('Would you like the temperature in Farenheit (f) or Celsius (c): ')
 if decision == 'c':
     print(math.floor(k2c(t)))
 elif decision == 'f':
     print(math.floor(k2f(t)))
+else:
+    print('User error, replace user')
+
+for x in day_data['list']:
+    t = time.strftime('%b-%d %H:%M', time.localtime(x['dt']))
+    w = x['weather']
+    for q in w:
+        print(q['description'])
+        print(t)
+
+print(t)
+
+# print(w[0]['description'])
+
+if data['main']['temp'] >= 75:
+    print('Lovely day for a Corona!')
+elif data['main']['temp'] <= 50:
+    print('Lovely day for a Guiness!')
+
 
 
 # print(data['main']['temp'])
