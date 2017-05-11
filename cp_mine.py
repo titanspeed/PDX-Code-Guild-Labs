@@ -19,10 +19,18 @@ class ParkingLot:
         self.parked_vehicles = self.create_space_numbers()
 
     def create_space_numbers(self):
-        empty_dict = {}
-        for i in range(self.spaces):
-            empty_dict[i] = None
-        return empty_dict
+        lot_numbers = {}
+        for i in range(1, self.spaces + 1):
+            lot_numbers['space_' + str(lot_numbers)] = None
+        return lot_numbers
+
+    def list_spaces(self):
+        print('++++++++++++++++++++++++++++++++++++++++++')
+        for spot_num, veh in self.parked_vehicles.items():
+            if veh is None:
+                print('{} is available.'.format(spot_num.capitalize()))
+            else:
+                print('{} {} is parked in {}'.format(veh.color, veh.model, spot_num.capitalize()))
 
     def make_car(self):
         make = input('What is the make of your car?: ')
@@ -30,55 +38,50 @@ class ParkingLot:
         year = int(input('What is the year of your car?: '))
         color = input('What is the color of your car?: ')
         car = Vehicle(make, model, year, color)
-        return car
 
-    def park(self):
-        if self.spaces_left > 0:
-            self.make_car()
-            self.spaces_left -= 1
-            self.parked_vehicles.append(self.make_car())
-            print('There are {} spaces left.'.format(self.spaces_left))
+    return car
+
+
+def park(self):
+    if self.spaces_left > 0:
+        car = self.make_car()
+        self.list_spaces()
+        q = input('Which space number would you like to park this {} {} in?: '.format(car.color, car.model))
+        self.parked_vehicles['space_' + q] = car
+        self.spaces_left -= 1
+        print('{} {} is parked in {}'.format(car.color, car.model, 'space_' + q.capitalize()))
+    else:
+        print('There are no spaces left.')
+
+
+def retrieve(self):
+    self.list_spaces()
+    q = input('Which space number would you like to retrieve?: ')
+    if int(q) in range(1, self.spaces + 1) and self.parked_vehicles['space_' + q] is not None:
+        self.parked_vehicles['space_' + q] = None
+        self.spaces_left += 1
+    else:
+        print('There is no vehicle in that spot.')
+
+
+def main_interface(self):
+    while True:
+        q = input('Would you like to (P)ark, (R)etrieve, (L)ist Spaces or (Q)uit?: ')
+        if q.lower() == 'p':
+            self.park()
+        elif q.lower() == 'r':
+            self.retrieve()
+        elif q.lower() == 'l':
+            self.list_spaces()
+        elif q.lower() == 'q':
+            print('Goodbye.')
+            quit()
         else:
-            print('Sorry, parking lot is full.')
+            print('I did not understand that. Please try again.')
 
-    def remove(self):
-        car_list = enumerate(self.parked_vehicles)
-        for i, v in car_list:
-            print('{} is in spot {}'.format(v, i))
-        removing = True
-        while removing:
-            q = input('Which car would you like to remove or (c)ancel? ')
-            if q.lower() == 'cancel' or q.lower() == 'c':
-                break
-            else:
-                try:
-                    veh = self.parked_vehicles.pop(int(q))
-                    self.spaces_left += 1
-                    print('{} has left the parking lot.'.format(veh.model))
-                    print('There are {} spaces left.'.format(self.spaces_left))
-                    removing = False
-                except IndexError:
-                    print('There is no vehicle in that spot!')
-                except ValueError:
-                    print('Thats not a valid selection.')
-
-    def program_running(self):
-        program_run = True
-        while program_run == True:
-            decision = input('Would you like to park your (p)ark your car, or (r)emove a car?')
-            if decision == 'p' or decision.lower == 'park':
-                self.park()
-            elif decision.lower == 'r' or decision.lower == 'remove':
-                self.remove()
 
 plot = ParkingLot(5)
-
-print(plot.parked_vehicles)
-
-plot.program_running()
-
-# plot.park()
-
+plot.main_interface()
 # plot.park(car1)
 # plot.park(car2)
 # plot.remove()

@@ -1,0 +1,124 @@
+header, header h1 {
+  background: green;
+  display: flex;
+  align-content: center;
+  justify-content: center; }
+  header h1 {
+    color: orangered; }
+
+.photos li:nth-child(1) {
+  background: url("https://visualhunt.com/photos/l/7/flower-bouquet-bunch-daisys.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(2) {
+  background: url("https://visualhunt.com/photos/l/7/flower-tropical-petal.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(3) {
+  background: url("https://visualhunt.com/photos/l/7/bloom-flower-petal.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(4) {
+  background: url("https://visualhunt.com/photos/l/7/petal-flora-flower.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(5) {
+  background: url("https://visualhunt.com/photos/l/7/botanical-flower-flora.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(6) {
+  background: url("https://visualhunt.com/photos/l/7/rose-flower-bloom.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(7) {
+  background: url("https://visualhunt.com/photos/l/7/coffee-flatlay-sunflower.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(8) {
+  background: url("https://visualhunt.com/photos/l/8/flower-petal.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.image-1 {
+  border: solid #91f917 10px;
+  display: flex;
+  align-content: space-around; }
+
+.image-2 {
+  border: solid orangered 10px;
+  display: flex;
+  align-content: space-around; }
+
+.image-3 {
+  border: solid yellow 10px;
+  display: flex;
+  align-content: space-around; }
+
+.image-4 {
+  border: solid green 10px;
+  display: flex;
+  align-content: space-around; }
+
+.image-5 {
+  border: solid brown 10px;
+  display: flex;
+  align-content: space-around; }
+
+.image-6 {
+  border: solid #397ef5 10px;
+  display: flex;
+  align-content: space-around; }
+
+.image-7 {
+  border: solid gray 10px;
+  display: flex;
+  align-content: space-around; }
+
+.image-8 {
+  border: solid #59c3ff 10px;
+  display: flex;
+  align-content: space-around; }
+
+.while-5 {
+  width: 55px; }
+
+.while-4 {
+  width: 54px; }
+
+.while-3 {
+  width: 53px; }
+
+.while-2 {
+  width: 52px; }
+
+.while-1 {
+  width: 51px; }
+
+.aside-1, .aside-2 {
+  height: 150px; }
+
+.aside-2 {
+  background: #ef8354; }
+
+.aside-4 {
+  height: 100px;
+  background: #000;
+  border-radius: 20%; }
+
+.photos {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap; }
+  .photos li {
+    width: 300px;
+    height: 300px; }
+
+/*# sourceMappingURL=style.css.map */

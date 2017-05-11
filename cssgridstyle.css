@@ -1,0 +1,10 @@
+body {
+    background: #ff441e;
+}
+
+.wrapper {
+    color: #333333;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+

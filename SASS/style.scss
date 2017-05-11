@@ -1,0 +1,77 @@
+@import "vars";
+
+header {
+  background: green;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  h1{
+    @extend header;
+    color: orangered;
+  }
+}
+
+
+@for $i from 1 through length($photos) {
+  .photos li:nth-child(#{$i}) {
+    background: url(nth($photos, $i));
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@each $name in map_keys($colors) {
+  .image-#{$name} {
+    $current-color: map_get($colors, $name);
+    border: solid $current-color 10px;
+    display: flex;
+    align-content: space-around;
+  }
+}
+
+@while $types > 0 {
+  .while-#{$types} {
+    width: $type-width + $types;
+    $types: $types - 1
+  }
+}
+
+@mixin background-mixin($boolean) {
+  @if $boolean == true {
+    height: 100px;
+    background: #000;
+    border-radius: 20%;
+  } @else {
+    height: 200px;
+    background: #84dcc6;
+  }
+}
+
+@mixin bgColor($coloor) {
+  background: $coloor;
+  height: 50px;
+}
+
+.aside-1 {
+  height: 150px;
+}
+
+.aside-2 {
+  @extend .aside-1;
+  background: #ef8354;
+}
+
+.aside-4 {
+  @include background-mixin(true)
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  li {
+    width: 300px;
+    height: 300px;
+  }
+}

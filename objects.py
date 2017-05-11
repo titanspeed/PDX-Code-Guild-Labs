@@ -15,7 +15,7 @@ class BankAccount:
 
     def deposit(self, amount):
         self.balance += amount
-        print('You have deposited ${} into your account. Your balance is now ${}'.format(amount, self.balance))
+        print('You have deposited ${} into your account. Your balance ilss now ${}'.format(amount, self.balance))
 
 
 class RestrictB(BankAccount):
