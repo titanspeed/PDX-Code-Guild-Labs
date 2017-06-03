@@ -1,0 +1,101 @@
+@import "variables";
+
+nav {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-around;
+  position: fixed;
+  background: linear-gradient(#ff1842, #ff9d1a);
+  width: 100%;
+  padding: 11px;
+  top: 0;
+  z-index: 100;
+  ul {
+    background: none;
+    list-style: none;
+    overflow: hidden;
+    padding: 0 0 0 20px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 75px 75px 75px 75px;
+  background: gray;
+
+  h1 {
+
+  }
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #d74bff;
+    h2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      flex-direction: column;
+    }
+  }
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+@for $i from 1 through length($allphotos) {
+  .photos li:nth-child(#{$i}) {
+    background: url(nth($allphotos, $i));
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  li {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.profilepic {
+    border: 2px solid #dddddd;
+    border-radius: 10px;
+    padding: 12px;
+    width: 650px;
+    opacity: 1.0;
+    filter: drop-shadow(8px 8px 10px red);
+  :hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  }
+}
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Whack A Mole!</title>
+    <link rel="stylesheet" type="text/css" href="whackmole.css">
+    <style>
+
+        .wrapgrid {
+            height:100%;
+            width:350px;
+            margin-top: 75px;
+        }
+
+
+        .whack-grid {
+            display: flex;
+            flex-wrap: wrap;
+            margin:-10px 0 0 -10px;
+        }
+
+        .hole, .mole {
+            display: inline-block;
+            flex-grow: 1;
+            height:100px;
+            width: calc(100% * (1/4) - 10px - 1px)
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="wrapgrid">
+
+    <div class="whack-grid">
+
+        <img src="hole.jpg" id="hole1" class="hole">
+        <img src="hole.jpg" id="hole2" class="hole">
+        <img src="hole.jpg" id="hole3" class="hole">
+        <img src="hole.jpg" id="hole9" class="hole">
+        <img src="hole.jpg" id="hole15" class="hole">
+        <img src="hole.jpg" id="hole4" class="hole">
+        <img src="hole.jpg" id="hole10" class="hole">
+        <img src="hole.jpg" id="hole16" class="hole">
+        <img src="hole.jpg" id="hole5" class="hole">
+        <img src="hole.jpg" id="hole11" class="hole">
+        <img src="hole.jpg" id="hole17" class="hole">
+        <img src="hole.jpg" id="hole6" class="hole">
+        <img src="hole.jpg" id="hole12" class="hole">
+        <img src="hole.jpg" id="hole18" class="hole">
+        <img src="hole.jpg" id="hole7" class="hole">
+        <img src="hole.jpg" id="hole13" class="hole">
+        <img src="hole.jpg" id="hole19" class="hole">
+        <img src="hole.jpg" id="hole8" class="hole">
+        <img src="hole.jpg" id="hole14" class="hole">
+        <img src="hole.jpg" id="hole20" class="hole">
+
+
+  </div>
+
+</div>
+
+<div>
+<button id="begin" class="begin" title="begin">PLAY!</button>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="whackmole.js"></script>
+
+</body>
+
+</html>

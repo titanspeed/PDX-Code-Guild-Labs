@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Lemonada');
+@import url('https://fonts.googleapis.com/css?family=BioRhyme');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+
+body {
+  line-height: 1.4;
+   font-family: 'Droid Sans', sans-serif;
+}
+
+.nav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  opacity: .98;
+  top: 0px;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav a:hover {
+  background-color: #0E0F19;
+  color: #fff9fb;
+}
+
+.nav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav a:not(:first-child) {display: none;}
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav.responsive {
+    position: relative;
+  }
+
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+  .circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  font-size: 50px;
+  line-height: 500px;
+  text-align: center;
+  background: #000;
+    justify-content: center;
+    font-family: 'Lemonada', cursive;
+    color: #AA9E9E;
+    transition: 0.5s;
+}
+
+.circle:hover {
+  text-transform: lowercase;
+  background: linear-gradient(
+          rgba(175, 19, 20, 0.50),
+          rgba(175, 19, 20, 0.50)
+  ),
+  url("pictures/mountainbackground.jpg");
+  box-shadow: 3px 3px 3px #1D1E2C;
+  background-size: contain;
+  transition: 1s;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  height: 35vh;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.introduction {
+  width: 75%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.sectionone {
+      display: flex;
+    max-width: 1500px;
+    margin: auto;
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
+  padding-bottom: 25px;
+}
+
+.sectiontwo {
+      display: flex;
+    max-width: 1500px;
+    margin: auto;
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills {
+  width: 44%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.interests {
+  width: 44%;
+  box-sizing: border-box;
+  display: block;
+}
+
+
+section figure {
+      justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 35%;
+    margin: 100px 0;
+  border: solid 5px #0E0F19;
+    border-radius: 20px;
+    padding: 18px;
+}

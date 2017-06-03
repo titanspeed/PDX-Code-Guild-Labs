@@ -1,0 +1,131 @@
+nav {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-around;
+  position: fixed;
+  background: linear-gradient(#ff1842, #ff9d1a);
+  width: 100%;
+  padding: 11px;
+  top: 0;
+  z-index: 100; }
+  nav ul {
+    background: none;
+    list-style: none;
+    overflow: hidden;
+    padding: 0 0 0 20px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 75px 75px 75px 75px;
+  background: gray; }
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #d74bff; }
+  section h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; }
+    section h2 p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      flex-direction: column; }
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0; }
+
+.photos li:nth-child(1) {
+  background: url("pictures/mountainme.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(2) {
+  background: url("pictures/beach1.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(3) {
+  background: url("pictures/fun1.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(4) {
+  background: url("pictures/Lola1.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(5) {
+  background: url("pictures/Lola2.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(6) {
+  background: url("pictures/mebike.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(7) {
+  background: url("pictures/mountainbackground.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(8) {
+  background: url("pictures/mtop1.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(9) {
+  background: url("pictures/mtop2.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(10) {
+  background: url("pictures/mtop3.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos li:nth-child(11) {
+  background: url("pictures/mtop4.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.photos {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap; }
+  .photos li {
+    width: 300px;
+    height: 300px; }
+
+.profilepic {
+  border: 2px solid #dddddd;
+  border-radius: 10px;
+  padding: 12px;
+  width: 650px;
+  opacity: 1.0;
+  filter: drop-shadow(8px 8px 10px red); }
+  .profilepic :hover {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px; }
+
+/*# sourceMappingURL=port_style.css.map */

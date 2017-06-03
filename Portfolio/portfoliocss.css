@@ -33,7 +33,7 @@ img {
 }
 
 img:hover {
-    width: 300px;
+    width: 350px;
     height: 400px;
     background: orangered;
 }
@@ -157,7 +157,7 @@ a {
 }
 
 body {
-    background-image: url("mountainbackground.jpg");
+    background-image: url("Pictures/mountainbackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

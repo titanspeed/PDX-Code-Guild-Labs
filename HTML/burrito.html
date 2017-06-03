@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Burrito Order Form</title>
+    <style>
+
+    .total {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .sectionone {
+        font-size: 3vh;
+    }
+
+    .section2 {
+        font-size: 3vh;
+    }
+
+    .namesection {
+        font: 3vh;
+    }
+
+            .bliner {
+                border-bottom: dotted;
+            }
+
+        .orderbox {
+            border: solid black 2px;
+            display: flex;
+            justify-content: center;
+            margin-left: 650px;
+            position: fixed;
+            width: 300px;
+            text-align: center;
+            flex-direction: column;
+        }
+
+
+    </style>
+
+</head>
+
+<header><h2>Configure Your Burrito!</h2></header>
+
+<body>
+
+ <div class="orderbox">
+      <ul id="ordertotal" class="total">
+          <h2 class="bliner">Your Burrito</h2>
+      </ul>
+        <h3 class="totalprice"></h3>
+    </div>
+
+<form>
+
+    <div class="namesection">
+    First Name:<br>
+    <input type="text" name="first_name" placeholder="Enter First Name">
+
+    <br>
+    Last Name:<br>
+    <input type="text" name="last_name" placeholder="Enter Last Name">
+    </div>
+
+    <br>
+    <input type="radio" name="takeout" data-value="for_here" checked>For Here<br>
+    <input type="radio" name="takeout" data-value="to_go">To Go<br>
+
+    <div class="sectionone">
+    <h4>Choose Your Protein:</h4>
+    <input type="radio" name="protein" id="chicken" data-value='2.0'>Chicken $2<br>
+    <input type="radio" name="protein" id="carne" data-value='2.5'>Carne Asada $2.50<br>
+    <input type="radio" name="protein" id="eggs" data-value='1.5'>Eggs $1.50<br>
+    <input type="radio" name="protein" id="tofu" data-value='2.0'>Tofu $2<br>
+    <input type="radio" name="protein" id="fish" data-value='3.0'>Fish $3<br>
+    </div>
+
+    <div class="section2">
+    <h4>What Else Inside?</h4>
+    <input type="checkbox" name="inside" data-name="Black Beans" id="black_beans" data-value='1.0'>Black Beans<br>
+    <input type="checkbox" name="inside" data-name="Refried Beans" id="refried_beans" data-value='1.0'>Refried Beans<br>
+    <input type="checkbox" name="inside" data-name="Charro Beans" id="charro_beans" data-value='1.50'>Charo Beans<br>
+    <input type="checkbox" name="inside" data-name="Brown Rice" id="brown_rice" data-value='1.0'>Brown Rice<br>
+    <input type="checkbox" name="inside" data-name="Mexican Style Rice" id="mexican_style_rice" data-value='1.50'>Mexican Style Rice<br>
+    <input type="checkbox" name="inside" data-name="Pico De Gallo" id="pico_de_gallo" data-value='1.0'>Pico<br>
+    <input type="checkbox" name="inside" data-name="Jalapenos" id="jalapenos" data-value='1.0'>Jalapenos<br>
+    <input type="checkbox" name="inside" data-name="Guac" id="guac" data-value='2.5'>Guac<br>
+    <input type="checkbox" name="inside" data-name="Habanero Sauce" id="habsauce" data-value='1.5'>Habanero Sauce<br>
+    <input type="checkbox" name="inside" data-name="Double Meat" id="meatdouble" data-value='3.5'>Double Meat<br>
+    </div>
+
+    <h4>All Done?</h4>
+    <input type="submit" id="donedone" value="submit">
+
+</form>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="burrito.js"></script>
+
+</body>
+
+</html>

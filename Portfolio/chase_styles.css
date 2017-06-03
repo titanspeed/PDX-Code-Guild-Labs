@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Lemonada');
+@import url('https://fonts.googleapis.com/css?family=BioRhyme');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+.circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  font-size: 50px;
+  line-height: 500px;
+  text-align: center;
+  background: #000;
+    justify-content: center;
+    font-family: 'Lemonada', cursive;
+    color: #AA9E9E;
+    transition: 1s;
+}
+
+.circle:hover {
+    text-transform: lowercase;
+    background: 
+            linear-gradient(
+                    rgba(175, 19, 20, 0.50),
+                    rgba(175, 19, 20, 0.50)
+            ),
+                    url("pictures/mountainbackground.jpg");
+    box-shadow: 3px 3px 3px #1D1E2C;
+    background-size: contain;
+    transition: 1s;
+}
+
+.gettoknow {
+    display: flex;
+    justify-content: center;
+    padding: 0 50px 0 50px;
+    padding-top: 50px;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.rectangle {
+    width: 350px;
+    height: 150px;
+    border-radius: 5%;
+    font-size: 25px;
+    color: #AA9E9E;
+    line-height: 150px;
+    text-align: center;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lemonada', cursive;
+}
+
+.rectangle:after {
+    content: "Hi, i'm Chase";
+}
+
+.rectangle:hover {
+    text-transform: lowercase;
+    background: rgba(175, 19, 20, 0.59);
+}
+
+.rectangle:hover:after {
+    content: "nice to meet you";
+}
+
+.roundbox {
+    width: 400px;
+    height: 250px;
+    border-radius: 10%;
+    font-size: 25px;
+    color: #AA9E9E;
+    line-height: 150px;
+    text-align: center;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lemonada', cursive;
+}
+
+.phantomdiv {
+    height: 105px;
+    background: #AA9E9E;
+}
+
+.introduction {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 3.6rem;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3vh;
+}
+
+nav {
+    display: flex;
+    background: #AA9E9E;
+    z-index: 5;
+    border-radius: 3px;
+    flex-direction: column;
+    font-family: 'Lemonada', cursive;
+    padding: inherit;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 15vh;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    text-decoration: none;
+    font-size: 4vh;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: black;
+    transition: .5s;
+}
+
+nav ul a:hover {
+    text-transform: lowercase;
+    background-color: rgba(175, 19, 20, 0.59);
+    border-radius: 15px;
+    padding: 0 10px 0 10px;
+}
+body {
+    margin: 0;
+}
+
+body header {
+  display: flex;
+  justify-content: center;
+  height: 87vh;
+    width: 100%;
+    align-items: center;
+    border-bottom: dashed;
+}
+
+header {
+    background: #3D3D3D;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    padding-bottom: 15rem;
+    height: 85vh;
+    font-family: 'Roboto Slab', serif;
+    justify-content: space-around;
+}
+
+main div {
+    width: 450px;
+}
+
+main div:nth-child(1){
+    text-align: justify;
+}
+
+main div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h2 {
+    text-align: center;
+}
+
+div li {
+    list-style: circle;
+}
+
+footer {
+    background-color: #ADA8B6;
+    height: 75vh;
+}
+
+/*.gettoknow {*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*padding: 0 50px 0 50px;*/
+    /*padding-top: 50px;*/
+    /*font-family: 'Roboto Slab', serif;*/
+
+/*}*/
