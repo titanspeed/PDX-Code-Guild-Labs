@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Whack A Mole!</title>
+    <title>Whack A Mole!</title>
     <link rel="stylesheet" type="text/css" href="whackmole.css">
     <style>
 
         .wrapgrid {
-            height:100%;
-            width:350px;
+            height: 100%;
+            width: 350px;
             margin-top: 75px;
         }
-
 
         .whack-grid {
             display: flex;
             flex-wrap: wrap;
-            margin:-10px 0 0 -10px;
+            margin: -10px 0 0 -10px;
         }
 
         .hole, .mole {
             display: inline-block;
             flex-grow: 1;
-            height:100px;
-            width: calc(100% * (1/4) - 10px - 1px)
+            height: 100px;
+            width: calc(100% * (1 / 4) - 10px - 1px)
+        }
+
+        .score {
+            display: flex;
+            text-align: center;
+            margin: 50px;
+            border: solid;
+            height: 50px;
+            padding: 45px;
+            font-size: 5vh;
         }
 
     </style>
@@ -57,13 +66,15 @@
         <img src="hole.jpg" id="hole20" class="hole">
 
 
-  </div>
+    </div>
 
 </div>
 
 <div>
-<button id="begin" class="begin" title="begin">PLAY!</button>
+    <button id="begin" class="begin" title="begin">PLAY!</button>
 </div>
+
+<span class="score" id="score">0</span>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="whackmole.js"></script>

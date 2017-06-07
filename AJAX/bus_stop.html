@@ -3,8 +3,9 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <title>Weather App</title>
+    <title>Bus Stops</title>
 
     <style>
 
@@ -18,43 +19,39 @@
             text-align: center;
         }
 
-        .weathertext {
+        .bustext, .stops {
             width: 95%;
             margin-right: auto;
             margin-left: auto;
             text-align: center;
         }
 
-        .image {
-            display: flex;
-            justify-content: center;
-        }
 
 
     </style>
-
 </head>
 
 <body>
 
 <div class="container">
     <article>
-        <h1>Weather or not?</h1>
-        <span id="weather">Want Weather? Click Button</span>
+        <h1>Bus Stops</h1>
+        <span id="busmessage">* Local stops for the location below *</span>
         <br>
-        <button id="newWeather">Weather Please!</button>
-        <p id="weathertext" class="weathertext"></p>
+        <!--<button id="busStops">CLICK FOR BUS STOPS</button>-->
+        <p id="bustext" class="bustext"></p>
+        <br>
+        <h2>Results</h2>
+        <p id="stops" class="stops"></p>
     </article>
 
 </div>
 
-<div class="image">
-<img id="represent" src="rain.png">
-</div>
+
+
 </body>
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="weather.js"></script>
+<script src="bus_stop.js"></script>
 
 </html>

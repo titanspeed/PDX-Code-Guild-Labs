@@ -1,22 +1,25 @@
 'use strict';
 
 var timer;
+var counter = 3000;
+var score = 0;
+// var interval = setInterval(gametime, counter);
 
-$('img').click( function () {
+$('img').click(function () {
     var img = $(this);
     if (img.attr('class') === 'mole') {
-        alert('click!');
-        console.log(this);
+        img.attr('src', 'hole.jpg').toggleClass('mole').toggleClass('hole');
+        score += 1;
+        $('.score').html(score);
+
     }
 });
 
-
-$('.begin').click( function() {
-    timer = setInterval(gametime, 300)
+$('.begin').click(function () {
+    timer = setInterval(gametime, counter)
 });
 
-
-function gametime () {
+function gametime() {
     var currentHoleVal = Math.floor((Math.random() * $('div img').length) + 1);
     var currentHole = $('.whack-grid img:nth-child(' + currentHoleVal + ')');
     var isTrue = true;
@@ -28,16 +31,33 @@ function gametime () {
 
         });
 
-            if (molelist < 20) {
-                currentHoleVal = Math.floor((Math.random() * $('div img').length) + 1);
-                currentHole = $('.whack-grid img:nth-child(' + currentHoleVal + ')');
-            } else {
-                isTrue = false;
-                alert('GAME OVER');
-                clearInterval(timer);
-            }
-        };
-
-        currentHole.attr('src', 'mole.jpg').toggleClass('mole').toggleClass('hole');
-
+        if (molelist < 20) {
+            currentHoleVal = Math.floor((Math.random() * $('div img').length) + 1);
+            currentHole = $('.whack-grid img:nth-child(' + currentHoleVal + ')');
+        } else {
+            isTrue = false;
+            alert('GAME OVER');
+            clearInterval(timer);
+        }
     }
+    ;
+
+    currentHole.attr('src', 'mole.jpg').toggleClass('mole').toggleClass('hole');
+    clearInterval(timer);
+    counter -= counter * (.03);
+    timer = setInterval(gametime, counter);
+    console.log(counter);
+
+}
+
+// function gametime () {
+//     var moleCount = $('.whack-grid').children('.hole');
+//     var currentHoleVal = Math.floor((Math.random() * moleCount.length) + 1);
+//     var currentHole = $('#' + moleCount[currentHoleVal].id);
+//     console.log(currentHole);
+//     currentHole.attr('src', 'mole.jpg').toggleClass('mole').toggleClass('hole');
+//     clearInterval(timer);
+//     counter -= counter * (.05);
+//     timer = setInterval(gametime, counter);
+//     console.log(counter);
+// }
